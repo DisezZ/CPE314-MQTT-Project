@@ -2,6 +2,11 @@
 
 This is a project in course CPE314 Computer Networks, for the first half of the semester, implementing the IOT communication using MQTT protocol.
 
+## Table of Contents
+- [Documentation](#documentation)
+- [Installation](#installation)
+- [Getting Started](#getting-started)
+
 ## Documentation
 
 There are total of 3 files in this project, ["publisher.py](publisher.py)", "[subscriber.py](./subscriber.py)", and "[surrealdb.py](./surrealdb.py)" 
