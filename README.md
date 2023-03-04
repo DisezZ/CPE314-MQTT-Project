@@ -12,22 +12,22 @@ as the sample data exchanging to each other is "SampleInput.xlsx".
 The topic that is used in this project are "nodes/$publisher-id/sensors/$sensor-type/$time"
 with extension of "/batches/$batch-number" where only thermal array will be using batches number.
 
-The "SampleInput.xlsx" is the sample input to used as a node information sent out from the node
+The "[SampleInput.xlsx](./SampleInput.xlsx)" is the sample input to used as a node information sent out from the node
 with time interval to the broker.
 
-The "publisher.py" is the python file containing the code for publisher to read the sample
+The "[publisher.py](./publisher.py)" is the python file containing the code for publisher to read the sample
 input and published it through the connected broker through specified topic.
 
 The broker is the local broker with port 1883 as port number used to communicate
 between each other.
 
-The "subscriber.py" is the python file containing the code for subscriber to received the message
+The "[subscriber.py](./subscriber.py)" is the python file containing the code for subscriber to received the message
 from broker and write the data to the database.
 
-The "surrealdb.py" is the python file containing the code for python client for the SurrealDB
+The "[surrealdb.py](./surrealdb.py)" is the python file containing the code for python client for the SurrealDB
 database which it commnunicate throgh local host with port number 8000.
 
-The "requirements.txt" is the file containing the name and version of the required packages
+The "[requirements.txt](./requirements.txt)" is the file containing the name and version of the required packages
 used to run the project.
 
 ## Installation
