@@ -53,8 +53,10 @@ def get_columns_name(worksheet):
 
 
 def on_connect(client, userdata, flags, rc):
-    print("Connected with resulted code "+str(rc))
-
+    if rc == 0:
+        print("Connected with resulted code "+str(rc))
+    else:
+        exit(1)
 
 #
 # Set up client for paho-mqtt, specify client id, on connect callback,

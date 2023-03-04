@@ -34,7 +34,10 @@ MQTT_CLIENT = "Test-Subcriber" if args.client_id == None else args.client_id
 
 # on connection call back function used by client
 def on_connect(client, userdata, flags, rc):
-    print("Connected with resulted code "+str(rc))
+    if rc == 0:
+        print("Connected with resulted code "+str(rc))
+    else:
+        exit(1)
 
 # on message incoming from broker
 # print out the information about incoming message
