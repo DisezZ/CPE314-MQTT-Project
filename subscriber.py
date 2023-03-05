@@ -48,13 +48,12 @@ def on_message(client, userdata, msg):
     sensor_type = topic_paths[3]
     time = topic_paths[4].replace(" ", "T") + "Z"
     print("client: "+subscriber_id+" | topic: "+msg.topic+" | payload: "+str(msg.payload.decode('utf-8'))+" | size: "+str(sys.getsizeof(msg.payload)))
-    match sensor_type:
-        case "humidity":
-            on_sensor_humidity(subscriber_id, time, str(msg.payload.decode('utf-8')))
-        case "temperature":
-            on_sensor_temperature(subscriber_id, time, str(msg.payload.decode('utf-8')))
-        case "thermal":
-            on_sensor_thermal_array(subscriber_id, time, topic_paths[-1], msg.payload.decode('utf-8').split(',')[:-1])
+    if sensor_type == "humidity":
+        on_sensor_humidity(subscriber_id, time, str(msg.payload.decode('utf-8')))
+    elif sensor_type == "humidity":
+        on_sensor_temperature(subscriber_id, time, str(msg.payload.decode('utf-8')))
+    if sensor_type == "humidity":
+        on_sensor_thermal_array(subscriber_id, time, topic_paths[-1], msg.payload.decode('utf-8').split(',')[:-1])
 
 # on message received is from humidity sensor
 # print out the value of received information about humidity
