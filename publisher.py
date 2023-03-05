@@ -38,7 +38,7 @@ MQTT_CLIENT = "Test-Publisher" if args.client_id == None else args.client_id
 
 # read excel by using openxl library, and return the active worksheet
 def read_excel():
-    workbook = openpyxl.load_workbook("UTF-8 SampleInput.xlsx")
+    workbook = openpyxl.load_workbook("SampleInput.xlsx")
     worksheet = workbook.active
     return worksheet
 

@@ -100,6 +100,7 @@ def on_sensor_thermal_array(publisher_id, time, batch_number, thermal_array):
     print(f"client: {publisher_id} | time: {time} | batch: {batch_number} | payload: {thermal_array}")
 
     table = MQTT_CLIENT
+    id = f"publishers/{publisher_id}/times/{time}"
 
     db_response = db(f"""
         LET $id="publishers/{publisher_id}/times/{time}";
